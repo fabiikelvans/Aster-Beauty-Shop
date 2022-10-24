@@ -69,6 +69,7 @@
   margin-top: 3rem;
 
   &__image{
+    cursor: pointer;
     .image-wrapper{
       position: relative;
       width: 100%;
@@ -91,8 +92,14 @@
     justify-content: space-between;
 
     &-name{
-      font-size: 1.2rem;
-      font-weight: 400;
+      font-size: 1.4rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--tp-header-primary);
+      @include transition(.35s);
+      &:hover{
+        color: var(--tp-common-white);
+      }
     }
     &-category{
       font-family: var(--tp-ff-script);

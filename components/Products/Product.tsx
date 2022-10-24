@@ -39,6 +39,7 @@ function Product({ product } : Props) {
         <div className='product'>
             <div className="product__image">
                 <div className="image-wrapper">
+                    <Link href={`/product/${product.slug.current}`}>
                     <Image
                         className='image'
                         src={urlFor(product.image[0]).url()}
@@ -46,12 +47,15 @@ function Product({ product } : Props) {
                         layout={"fill"}
                         objectFit={'cover'}
                     />
+                    </Link>
                 </div>
             </div>
             <div className="product__details">
                 <div>
                     <div className="product__details-name">
+                        <Link href={`/product/${product.slug.current}`}>
                         {product.title}
+                        </Link>
                     </div>
 
                     <div className="product__details-price">

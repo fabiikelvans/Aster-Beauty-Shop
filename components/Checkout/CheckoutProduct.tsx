@@ -8,6 +8,7 @@ import { IoAddCircleOutline, IoRemoveCircleOutline} from "react-icons/io5";
 import { BiTrash} from "react-icons/bi";
 
 import Currency from 'react-currency-formatter';
+import Link from "next/link";
 
 
 interface Props {
@@ -59,7 +60,12 @@ function CheckoutProduct({ items, id } : Props) {
                 />
             </div>
 
-            <div className="modal__product-item">{items[0].title}</div>
+            <div className="modal__product-item">
+                <Link href={`/product/${product.slug.current}`}
+                >
+                {items[0].title}
+                </Link>
+                </div>
 
             <div className="modal__product-quantity">
                 <IoRemoveCircleOutline className='q-icon'

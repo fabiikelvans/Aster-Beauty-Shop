@@ -1,0 +1,87 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*   PRODUCT
+/*----------------------------------------*/
+
+.product-page{
+  margin-top: 8rem;
+  display: flex;
+  @media #{$sm, $xs}{
+    flex-direction: column;
+  }
+  &-description{
+    width: 50%;
+    position: relative;
+    padding: 2rem 8%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    @media #{$sm, $xs}{
+      width: 100%;
+    }
+
+    // Product Name
+    h1{
+      font-size: 4vw;
+      color: var(--tp-theme-1);
+      @media #{$sm, $xs}{
+        font-size: 3rem;
+      }
+    }
+
+    // Star
+    .star-1{
+      position: absolute;
+      top: 5%;
+      left: 70%;
+      font-size: 4rem;
+      color: var(--tp-common-orange);
+      @media #{$sm, $xs}{
+        left: 85%;
+        font-size: 3rem;
+      }
+    }
+
+    // Description
+    p{
+      font-size: 1.2rem;
+      @media #{$sm, $xs}{
+      }
+    }
+
+    // Price
+    h4{
+      font-size: 2.4rem;
+      color: var(--tp-common-orange);
+    }
+
+    // Quote
+    .quote{
+      font-family: var(--tp-ff-script);
+      font-size: 1.8rem;
+      color: var(--tp-common-text);
+    }
+  }
+  &-image{
+    width: 50%;
+    position: relative;
+    @media #{$sm, $xs}{
+      width: 100%;
+    }
+    .image-wrapper{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      @media #{$sm, $xs}{
+        width: 100%;
+        height: 50vh;
+      }
+      .image{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
