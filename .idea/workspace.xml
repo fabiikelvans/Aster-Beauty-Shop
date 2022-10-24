@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6c064f8-43ce-4ba0-a16e-6591aea3b9f9" name="Changes" comment="favicon update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/scss/layout/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/scss/layout/_header.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +84,7 @@
       <workItem from="1666401918972" duration="1957000" />
       <workItem from="1666458277957" duration="20066000" />
       <workItem from="1666583758956" duration="2005000" />
-      <workItem from="1666586807904" duration="17133000" />
+      <workItem from="1666586807904" duration="17770000" />
     </task>
     <task id="LOCAL-00001" summary="favicon update">
       <created>1665987953326</created>

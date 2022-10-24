@@ -22,10 +22,8 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.34);
-
-  @media #{$xl, $lg}{
-    padding: 0 8%;
-  }
+  padding: 0 8%;
+  
 
   @media #{$md, $sm, $xs}{
     padding: 0 6%;
