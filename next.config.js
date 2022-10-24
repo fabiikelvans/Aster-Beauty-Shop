@@ -8,7 +8,8 @@ const nextConfig = withTM({
     images: {
         domains: [
             'images.unsplash.com',
-            'cdn.sanity.io'
+            'cdn.sanity.io',
+            'i.ibb.co'
         ],
     },
 

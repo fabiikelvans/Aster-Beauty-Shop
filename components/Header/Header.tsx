@@ -38,7 +38,7 @@ function Header() {
                 <div className="header__bottom-image">
                 <Image
                     className='image'
-                    src='/../public/images/header/model.png'
+                    src='https://i.ibb.co/P95ZNMP/model.png'
                     alt="Image"
                     layout={"fill"}
                     objectFit={'cover'}
