@@ -5,7 +5,7 @@
 
 
 ### Live
-Check out the demo site [Aster](https://clone-aae80.web.app/)
+Check out the demo site [Aster](https://aster-beauty-shop.vercel.app/)
 
 
 ### Built using:
