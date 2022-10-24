@@ -113,9 +113,8 @@
     margin: 0;
     outline: none;
     transition: .45s ease-in-out;
-    @media #{$xl, $lg}{
-      display: none;
-    }
+    display: none;
+    
     @media #{$md, $sm, $xs}{
       display: block;
     }
