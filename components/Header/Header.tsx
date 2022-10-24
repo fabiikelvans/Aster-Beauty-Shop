@@ -1,63 +1,54 @@
 import React from 'react';
 import Image from "next/image";
-import {BsArrowUpRight} from "react-icons/bs";
-import Link from "next/link";
-import {urlFor} from "../../sanity";
 
-interface Props {
-    posts: Post[];
-}
-
-function Header({ posts }: Props) {
-
-    const headerPost = posts[1];
-
+function Header() {
     return (
         <div className='header'>
             <div className="header__title">
-                <h1>we are creative </h1>
-                <h1 className='t-b'> <span>&</span> innovative</h1>
+               <div className="header__title-each">
+                   <div className="text">Beyond</div>
+                   <div className="image-wrapper">
+                       <Image
+                           className='image'
+                           src='https://images.unsplash.com/photo-1564278252487-9af98186ca21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjIzfHxiZWF1dHklMjBwcm9kdWN0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
+                           alt="Image"
+                           layout={"fill"}
+                           objectFit={'cover'}
+                       />
+                   </div>
+               </div>
+               <div className="header__title-each">
+                   <div className="image-wrapper">
+                       <Image
+                           className='image'
+                           src='https://images.unsplash.com/photo-1601612628452-9e99ced43524?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzMxfHxiZWF1dHklMjBwcm9kdWN0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
+                           alt="Image"
+                           layout={"fill"}
+                           objectFit={'cover'}
+                       />
+                   </div>
+                   <div className="text">Elegance</div>
+               </div>
+            </div>
+            <div className="header__backdrop">
+                Elegance
             </div>
 
-            <div className="header__content">
-                <div className="header__content-main">
-                    <div className='btn'>
-                        <Link href={`/blog/${headerPost.slug.current}`}>
-                        <>
-                            <span>Explore More</span>
-                            <span className='icon'><BsArrowUpRight/></span>
-                        </>
-                        </Link>
-                    </div>
-
-                    <div className="image-wrapper">
-                        <Link href={`/blog/${headerPost.slug.current}`}>
-                            <Image
-                                className='image'
-                                src={urlFor(headerPost.mainImage).url()!}
-                                alt="Image"
-                                layout={"fill"}
-                                objectFit={'cover'}
-                            />
-                        </Link>
-
-                    </div>
-
+            <div className="header__bottom">
+                <div className="header__bottom-image">
+                <Image
+                    className='image'
+                    src='/../public/images/header/model.png'
+                    alt="Image"
+                    layout={"fill"}
+                    objectFit={'cover'}
+                />
                 </div>
 
-                <div className='header__content-featured'>
-                    {
-                        posts.map((post) => (
-                    <Link href={`/blog/${post.slug.current}`} key={post._id}>
-                        <h3> <span> - </span>
-                            {post.title}
-                        </h3>
-                    </Link>
-                        ))
-                    }
+                <div className="header__bottom-text">
+                    <span>Ready to Glow</span>
+                    <p>Use our super premium cosmetics and make your skin glow like any other celebrity!</p>
                 </div>
-
-                <div className="header__content-list"></div>
             </div>
         </div>
     );

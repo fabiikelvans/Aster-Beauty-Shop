@@ -1,0 +1,91 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*   GLOW
+/*----------------------------------------*/
+
+.glow{
+  padding-left: 8%;
+  margin: 8rem 0;
+  display: flex;
+  @media #{$md, $sm, $xs}{
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  // GLOW TEXT
+  &__text {
+    position: relative;
+
+    .star-1 {
+      position: absolute;
+      top: 0;
+      left: 46%;
+      font-size: 4rem;
+      color: var(--tp-common-orange);
+      @media #{$md, $sm, $xs}{
+        left: 65%;
+        font-size: 3rem;
+      }
+    }
+
+    h1 {
+      font-size: 6vw;
+      color: var(--tp-theme-1);
+      margin-top: 2rem;
+      @media #{$sm, $xs}{
+        font-size: 3rem;
+      }
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 2rem 0;
+      width: 70%;
+      @media #{$sm, $xs}{
+        width: 90%;
+      }
+    }
+
+    .glow__btn{
+      border: 1px solid var(--tp-common-orange);
+
+      padding: 1.2rem 2.2rem;
+      font-family: var(--tp-ff-script);
+      font-size: 1.6rem;
+      color: var(--tp-common-orange);
+      border-radius: 80%;
+      span{
+        transform: rotate(-20deg);
+      }
+      @include transition(.3s);
+
+      &:hover{
+        background: var(--tp-common-orange);
+        color: var(--tp-common-white);
+      }
+    }
+  }
+
+  // GLOW IMAGE
+  &__image{
+    position: relative;
+
+    
+    &-wrapper{
+      position: relative;
+      width: 42vw;
+      height: 34vw;
+      @media #{$sm, $xs}{
+        width: 68vw;
+        height: 44vw;
+      }
+      .image{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+      }
+    }
+  }
+  }

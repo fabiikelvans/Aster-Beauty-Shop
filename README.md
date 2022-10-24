@@ -1,11 +1,11 @@
 
-<h1> 🔥Bloggy - Creative Blog 🔥🔥 </h1>
+<h1> Aster Beauty Shop 🔥🔥 </h1>
 
-😋 Neatly designed Blog developed using Next JS, Typescript & Sanity
+😋 Neatly designed Beauty E-Commerce Shop developed using Next JS, Typescript, Stripe Payment API & Sanity.
 
 
 ### Live
-Check out the demo site [Bloggy](https://clone-aae80.web.app/)
+Check out the demo site [Aster](https://clone-aae80.web.app/)
 
 
 ### Built using:
@@ -16,6 +16,10 @@ Next JS (SSR)
 TypeScript
 
 Sanity
+
+Stripe API
+
+GSAP
 
 ## Technologies
 

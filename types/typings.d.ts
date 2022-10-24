@@ -19,19 +19,37 @@ interface Image {
     };
 }
 
-interface Post{
+interface Product {
     _id: string;
     _createdAt: string;
+    _updatedAt: string;
+    _rev: string;
+    _type: "product";
     title: string;
-    author:{
-        name: string;
-        image: string;
-    };
-    description: string;
-    mainImage: Image[];
+    price: number;
     slug: {
+        _type: "slug";
         current: string;
     };
-    body: [object];
-    category: Category
+    description: string;
+    category: {
+        _type: "reference";
+        _ref: string;
+    };
+    image: Image[];
+}
+
+interface StripeProduct {
+    id: string;
+    amount_discount: number;
+    amount_subtotal: number;
+    amount_tax: number;
+    amount_total: number;
+    currency: string;
+    description: string;
+    object: string;
+    quantity: number;
+    price: {
+        unit_amount: number;
+    };
 }

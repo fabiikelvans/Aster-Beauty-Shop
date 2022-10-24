@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "bloggy-sanity"
+    "name": "aster-ecommerce"
   },
   "api": {
-    "projectId": "2o4e8h10",
+    "projectId": "8xp6f79d",
     "dataset": "production"
   },
   "plugins": [

@@ -1,52 +1,63 @@
 import React from 'react';
 import Link from "next/link";
-import {BsFacebook, BsTwitter} from "react-icons/bs";
-import {AiFillInstagram} from "react-icons/ai";
+import {SlSocialFacebook, SlSocialInstagram, SlSocialLinkedin} from "react-icons/sl";
+
 
 function Footer() {
     return (
         <div className='footer'>
-            <div className="footer-top">
-                <div className="footer__logo">
-                    <Link href={'/'}>bloggy.</Link>
-                </div>
-                <div className="footer__about">
-                    <div className="footer-title">
-                        <h5>About</h5>
-                    </div>
-                    <div className="footer-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
+            <div className="footer__top">
+                <div>
+                    <h6 className='tagline'>Make your skin shine</h6>
+                    <h1 className='logo'>Aster.</h1>
                 </div>
 
-                <div className="footer__contact">
-                    <div className="footer-title">
-                        <h5>Contact</h5>
-                    </div>
-                    <div className="footer-content">
-                        <Link href={'/'}>info@bloggy.com</Link>
-                        <Link href={'/'}>+254 123 456 789</Link>
-                    </div>
-                </div>
-                <div className="footer__social">
-                    <div className="footer__social-link">
-                        <Link href={'/'}><BsTwitter/></Link>
-                    </div>
-                    <div className="footer__social-link">
-                    <Link href={'/'}><BsFacebook/></Link>
-                    </div>
-                        <div className="footer__social-link">
-                    <Link href={'/'}><AiFillInstagram/></Link>
-                        </div>
+                <div>
+                    <p>
+                        Nourish your skin with fan-favorite SPF body products. Shop limited-edition kits, special launches and more, only available here.
+                    </p>
                 </div>
             </div>
 
-            <div className="footer-bottom">
-                <div className="footer__copyright">
-                    <div className='footer__copyright-copy'>&copy; Copyright Bloggy. </div>
-                    <div className="footer__copyright-docs">
-                        <Link href={'/'}>Privacy Policy</Link>
-                        <Link href={'/'}>Terms & Conditions</Link>
+            <div className="footer__bottom">
+                <div className="footer__bottom-left">
+                    <div className="footer__bottom-left_menu">
+                        <h4>Menu</h4>
+                        <ul>
+                            <li><Link href='/'>Men</Link></li>
+                            <li><Link href='/'>Women</Link></li>
+                            <li><Link href='/'>Accessories</Link></li>
+                            <li><Link href='/'>Beauty</Link></li>
+                        </ul>
+                    </div>
+
+                    <div className="footer__bottom-left_support">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><Link href='/'>Terms & Conditions</Link></li>
+                            <li><Link href='/'>Privacy Policy</Link></li>
+                            <li><Link href='/'>Legal Mention</Link></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="footer__bottom-right">
+                    <div className="icon">
+                    <Link href='/'>
+                        <SlSocialFacebook/>
+                    </Link>
+                    </div>
+
+                    <div className="icon">
+                    <Link href='/'>
+                        <SlSocialInstagram/>
+                    </Link>
+                    </div>
+
+                    <div className="icon">
+                        <Link href='/'>
+                            <SlSocialLinkedin/>
+                        </Link>
                     </div>
                 </div>
             </div>

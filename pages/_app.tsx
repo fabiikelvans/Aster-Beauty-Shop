@@ -1,24 +1,25 @@
-import '../styles/styles.scss'
+import '../styles/scss/main.scss'
 import type { AppProps } from 'next/app'
-// Import Swiper styles
+
 import 'swiper/scss';
 import 'swiper/scss/navigation';
-import {AnimatePresence, motion} from "framer-motion";
-
-import NextNProgress from 'nextjs-progressbar';
-
-import {useTransitionFix} from "../hooks/useTransitionFix";
+import {Provider} from "react-redux";
+import {persistor, store} from "../redux/store";
+import {PersistGate} from "redux-persist/integration/react";
+import {Toaster} from "react-hot-toast";
+import {GoogleOAuthProvider} from "@react-oauth/google";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
 
-    const transitionCallback = useTransitionFix();
-
     return  (
-
-        <AnimatePresence exitBeforeEnter onExitComplete={transitionCallback}>
-            <NextNProgress color="#FF7836" startPosition={0.3} stopDelayMs={200} height={3} />
-            <Component {...pageProps} />
-        </AnimatePresence>
+        <Provider store={store}>
+            <Toaster/>
+            <PersistGate loading={null} persistor={persistor}>
+                <GoogleOAuthProvider clientId={`${process.env.NEXT_PUBLIC_GOOGLE_API_TOKEN}`}>
+                <Component {...pageProps} />
+                </GoogleOAuthProvider>
+            </PersistGate>
+        </Provider>
       )
 
 }

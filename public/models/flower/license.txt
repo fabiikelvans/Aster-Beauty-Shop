@@ -1,0 +1,11 @@
+Model Information:
+* title:	Stylized Handpainted Flower
+* source:	https://sketchfab.com/3d-models/stylized-handpainted-flower-26d5b299165b4fcb91cdcb5b8312942b
+* author:	karollinemac (https://sketchfab.com/karollinemac)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Stylized Handpainted Flower" (https://sketchfab.com/3d-models/stylized-handpainted-flower-26d5b299165b4fcb91cdcb5b8312942b) by karollinemac (https://sketchfab.com/karollinemac) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

@@ -1,0 +1,156 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*   SUCCESS
+/*----------------------------------------*/
+
+.success{
+  display: flex;
+  min-height: 100vh;
+  @media #{$sm, $xs}{
+    flex-direction: column;
+  }
+  &__left{
+    background: var(--tp-theme-1);
+    padding-left: 8%;
+    padding-right: 4%;
+    padding-top: 4rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 6vh;
+    color: var(--tp-common-white);
+    @media #{$sm, $xs}{
+      width: 100%;
+    }
+
+    &-logo{
+      font-family: var(--tp-ff-script);
+      font-size: 2.5rem;
+    }
+
+    &-thanks{
+      display: flex;
+      justify-content: space-between;
+      padding-top: 8vh;
+      .text{
+        font-family: var(--tp-ff-heading);
+        font-size: 2rem;
+        color: var(--tp-common-orange);
+      }
+      .number{
+        font-size: 1rem;
+        span{
+          color: var(--tp-common-orange);
+        }
+      }
+    }
+
+    &-order, &-update{
+      h4{
+        color: var(--tp-common-white);
+        font-family: var(--tp-ff-primary);
+      }
+      h5{
+        font-family: var(--tp-ff-script);
+        font-size: 1.4rem;
+        color: var(--tp-common-orange);
+        margin-top: 20px;
+      }
+      p{
+        width: 90%;
+        font-size: 1rem;
+        margin: 10px 0;
+        color: var(--tp-text-15);
+      }
+    }
+
+    &-contact{
+      font-size: 1rem;
+      span{
+        cursor: pointer;
+        color: var(--tp-common-orange);
+        font-weight: 600;
+        @include transition(.25s);
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+
+
+  }
+
+
+  &__right{
+    width: 50%;
+    padding-right: 8%;
+    padding-bottom: 4rem;
+    padding-left: 4rem;
+    position: relative;
+    @media #{$sm, $xs}{
+      width: 100%;
+    }
+
+    &-title{
+      h1{
+        display: flex;
+        position: absolute;
+        top: 34%;
+        left: -22%;
+        font-family: var(--tp-ff-heading);
+        font-size: 3.5vw;
+        -webkit-text-stroke: 1px var(--tp-common-orange);
+        color: transparent;
+        z-index: 1;
+        opacity: 0.15;
+        margin: 0 auto;
+        transform: rotate(-90deg);
+        letter-spacing: 1px;
+        @media #{$sm, $xs}{
+          display: none;
+        }
+      }
+    }
+  }
+
+  // SUCCESS PRODUCT DETAILS
+  .success__product{
+    margin-top: 4rem;
+    &-title{
+      h2{
+        font-size: 1.6rem;
+        color: var(--tp-theme-1);
+        margin-top: 1rem;
+      }
+    }
+
+    &-title, &-subtotal, &-discount, &-shipping, &-total{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    hr{
+      margin: 30px 0;
+    }
+    .text-1{
+      font-family: var(--tp-ff-script);
+      font-size: 1.6rem;
+    }
+    .amount{
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .total{
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--tp-theme-1);
+    }
+    .total-amount{
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--tp-common-orange);
+      margin-bottom: 2rem;
+    }
+  }
+}

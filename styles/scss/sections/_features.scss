@@ -1,0 +1,107 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*   FEATURES
+/*----------------------------------------*/
+
+.feature{
+  display: flex;
+  column-gap: 4rem;
+  padding: 0 8%;
+  margin: 12rem 0;
+  @media #{$md, $sm, $xs}{
+    display: flex;
+    flex-direction: column;
+  }
+  &__images{
+    display: flex;
+    column-gap: 2rem;
+    &-left{
+      display: flex;
+    }
+    .img-1, .img-2, .img-3{
+      position: relative;
+      width: 24vw;
+      height: 10vw;
+      .image{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+      }
+    }
+    .img-1{
+      width: 16vw;
+      height: 28vw;
+      @media #{$md, $sm, $xs}{
+        width: 32vw;
+        height: 52vw;
+      }
+    }
+    .img-2{
+      width: 18vw;
+      height: 11vw;
+      @media #{$md, $sm, $xs}{
+        width: 36vw;
+        height: 22vw;
+      }
+    }
+    .img-3{
+      width: 10vw;
+      height: 16vw;
+      @media #{$md, $sm, $xs}{
+        width: 24vw;
+        height: 30vw;
+      }
+    }
+    &-right{
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+    }
+  }
+
+  // FEATURED TEXT
+  &__text{
+    position: relative;
+
+    .star-1{
+      position: absolute;
+      top: 0;
+      left: 42%;
+      font-size: 4rem;
+      color: var(--tp-common-orange);
+      @media #{$sm, $xs}{
+        left: 85%;
+        font-size: 3rem;
+      }
+    }
+    h1{
+      font-size: 6vw;
+      color: var(--tp-theme-1);
+      margin-top: 2rem;
+      @media #{$sm, $xs}{
+        font-size: 3rem;
+      }
+    }
+
+    p{
+      font-size: 1.1rem;
+      margin: 2rem 0;
+    }
+
+    .feature__btn{
+      display: flex;
+      align-items: center;
+      column-gap: 1rem;
+      font-family: var(--tp-ff-script);
+      span{
+        font-size: 1.4rem;
+      }
+      svg{
+        font-size: 2rem;
+        color: var(--tp-common-orange);
+      }
+    }
+  }
+}
